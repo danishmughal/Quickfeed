@@ -1,0 +1,3 @@
+== Quickfeed
+
+A small web app that lets you digest content from facebook beautifully, quickly, and efficiently while at the same time saving you from wasted time.
