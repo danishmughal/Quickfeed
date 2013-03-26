@@ -2,15 +2,35 @@
 	Not logged in
 <% else %>
 
-<h1>Quickfeed</h1>
 
-Home page.
+<div class="hero-unit">
+	<div class="container">
 
-<% @news.each do |story| %>
-	Post ID:<%= story["post_id"] %><br>
-	Poster:<%= @graph.get_object("#{story['actor_id']}")["name"] %><br>
-	Message:<%= story["message"] %><br>
-	Target:<%= story["target_id"]%><br><br>
-<% end %>
+		<h1>Quickfeed</h1>
+
+		<br>
+		<br>
+
+		<% @news.take(1).each do |story| %>
+			Post ID:<%= story["post_id"] %><br>
+			Poster:<%= @graph.get_object("#{story['actor_id']}")["name"] %><br>
+			Message:<%= story["message"] %><br>
+			Target:<%= story["target_id"]%><br><br>
+
+
+
+				<button class="btn btn-large btn-primary">Like</button>
+				<button class="btn btn-large btn-info">Comment</button>
+				<button class="btn btn-large btn-success">Mark as read</button>
+
+		<% end %>
+
+	</div>
+</div>
+
+
+
+
+
 
 <% end %>

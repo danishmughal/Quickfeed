@@ -45,6 +45,7 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
+    flat-ui-rails (0.0.2)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.2.0)
@@ -134,6 +135,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   coffee-rails (~> 3.2.1)
+  flat-ui-rails
   jquery-rails
   koala
   omniauth-facebook
