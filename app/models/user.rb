@@ -15,7 +15,7 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid
 
-
+  has_many :read_posts
 
   #Omniauth function to manage logging in and user creation for users who have newly signed up through the facebook login
   def self.from_omniauth(auth)

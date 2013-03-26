@@ -5,7 +5,10 @@ Quickfeed::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
+  resources :feeds
   root to: 'feeds#home'
+
+  match 'read' => 'feeds#mark_as_read'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
