@@ -1,3 +1,16 @@
+<% if !current_user %>
+	Not logged in
+<% else %>
+
 <h1>Quickfeed</h1>
 
 Home page.
+
+<% @news.each do |story| %>
+	Post ID:<%= story["post_id"] %><br>
+	Poster:<%= @graph.get_object("#{story['actor_id']}")["name"] %><br>
+	Message:<%= story["message"] %><br>
+	Target:<%= story["target_id"]%><br><br>
+<% end %>
+
+<% end %>
